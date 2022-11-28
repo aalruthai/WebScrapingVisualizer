@@ -1,0 +1,36 @@
+<plotly-plot
+[data]="graph1.data"
+[layout]="graph1.layout"
+[useResizeHandler]="true"
+[updateOnDataChange]="true"
+></plotly-plot>
+<hr>
+<br>
+<select (change)="onChange($event)">
+  <option *ngFor="let month of dates" value="{{month}}">{{month}}</option>
+</select>
+<plotly-plot
+[data]="graph2.data"
+[layout]="graph2.layout"
+[useResizeHandler]="true"
+[updateOnDataChange]="true"
+></plotly-plot>
+<hr>
+<br>
+<select (change)="onCountryChange($event)">
+  <option *ngFor="let country of countries" value="{{country}}">{{country}}</option>
+</select>
+<plotly-plot
+[data]="graph3.data"
+[layout]="graph3.layout"
+[useResizeHandler]="true"
+[updateOnDataChange]="true"
+></plotly-plot>
+<hr>
+<br>
+<plotly-plot
+[data]="graph4.data"
+[layout]="graph4.layout"
+[useResizeHandler]="true"
+[updateOnDataChange]="true"
+></plotly-plot>
